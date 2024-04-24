@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- Used the extension live server, which refreshes the page as you make changes locally-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <!-- linking the css file-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/300f5bbae2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Reba Aliah Mathews.png" class="logo">
+            
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+    
+            <p> Software Engineer</p>
+            <h1> Hi, I'am <span> Reba</span><br>Aliah Mathews <br> from United States </h1>
+        </div>
+    </div>
+</div>
+<!--          About               -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/myportrait.jpg" alt="about me">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1> 
+                <p> I am currently a Computer Science student at North Carolina State University. I am involved in the Women In Computer Science
+                    Club chapter, as well as hackathons throughout my experience in the university. During the weekends I am involved in volunteering to 
+                    teach middle school students HTML as part of the NCSU 
+
+
+                    <br><br>
+
+                    I have created this web page utilizing javascript to show other projects as part of my portfolio.
+                    I will be graduating in May 2025. I am seeking a position for fall 2024 as a CO-OP rotation, and future employment after May 2025. 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education') ">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Languages & Technologies</span>
+                            <br>CSS <br> Jasmine Framework <br> Scrum, AGILE methodologies, Web services
+                            
+                            <br>Google Ads <br> Goodle Research Collaboration <br> FileZilla <br>Putty <br> GDB <br> GitHub<br> sklearn
+                            <br>CSS, PHP, SQL, Node JS,Java, Java Script, HTML, Python, Angular JS, Vuetify, R language, XCode <br> JSON <br> API Contracts <br> API SwaggerHub <br>PHP storm, Eclipse, Visual Studios, Visual Studio Code
+                        </li>
+                        <li><span>Level 1: Access White Belt</span><br>Issued by McGraw Hill</li>
+                        <li><span>Level 3: Excel Purple Belt</span><br>Issued by McGraw Hill</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>NCSU Research Assistant</span>
+                            <br> iOS Bluetooth APP development for wireless sensors
+                            <br> Utilized XCode platform to update the UI
+                            <br> Participated in symposiums to broaden the project scope and share project findings
+                            <br> Added custom project selection featurs and data reading capabilities
+                        </li>
+                        <li><span>Fidelity Leap Intern: Full Stack Engineer</span>
+                            <br> Work within a team practicing AGILE development.
+                            <br> Participated in sprints, utilizing Angular JS to assist in immigrating outdated technology into a modernized version.
+                            <br> Utilized project management techniques such as story building to convey the goals the project has in milestones.
+                            <br> Created API contracts, mock data structures, interfaces, and models
+                            <br> Tested components using Jasmine, Karma, and JS testing modules that met coverage requirements within local development.
+                        </li>
+                        <li><span>NCSU Student Web Developer</span>
+                            <br> Work within a SCRUM developer team to create modern Web applications that solve real-world problems.
+                            <br> Utilizes PHP and Javascript coding to assist with WordPress content, and from initial design to bug hunting.
+                            <br> Immigrated an application from scratch through building all the web components using Vuetify 3 a javascript framework.
+                            <br> Assisted in training new recruits into the team.
+                        </li>
+                        <li><span>NCSU Research Program for Undergraduate/Research Assistant</span>
+                            <br> Designed research proposal for the Professor
+                            <br> Designed a pilot project report that included the prototype for research opportunity.
+                            <br> Identified the variables and observations the researchers would need to get the data required.
+                            <br> Researched for similar papers and conducted literature reviews
+                        </li>
+                        <li><span>ProTrak LLC/ Student Intern</span>
+                            <br> Utilized HTML, CSS, JavaScript, and SQL to create a UI interface and connect to the database.
+                            <br> Implemented table validation and used SQL server to keep the tables updated from the server, and whenever any changes are made through the forms.
+                            <br> Utilized project management skills to carry the project out in a timely manner.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Apex Friendship High School</span><br>Graduate of June 2021</li>
+                        <li><span>Wake Technical Community College</span><br>Dual enrolled student<br> Completed the Information Technology: Computer Programming Foundations</li>
+                        <li><span>North Carolina State University</span><br>Current enrolled student<br>Computer Science Bachelors<br> Expected Graduation: May 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--------------------services------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2> Web Design</h2>
+                <p> Create a custom website</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-uikit"></i>
+                <h2> UI/UX Design</h2>
+                <p> Create templates for website and app usage</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------portfolio-------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/background.jpg">
+                <div class="layer">
+                    <h3>Diamond Hackathon 2022</h3>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/background.jpg">
+                <div class="layer">
+                    <h3>Diamond Hackathon 2023</h3>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/background.jpg">
+                <div class="layer">
+                    <h3>Personal Website</h3>
+                    <p> The current website was created from scratch using JS, HTML, and CSS</p>p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-------------------contact--------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Me</h1>
+                <p>aliahmathewsr@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/reba-a-m/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-regular fa-phone"></i></a>
+                    <a href="aliahmathewsr@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <a href="cv/Reba  Aliah Mathews_ Resume- 4_22.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">  </span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Kevin. Made with <i class="fa-regular fa-heart"></i> by Easy Tutorials</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx4NGIHCtnCiZ1rWD_mP7HTo2LluPkM_2jnadqC060RdMZhaexKvcR4u_Ii6PCcf4kFhw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
