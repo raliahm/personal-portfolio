@@ -24,13 +24,12 @@ body{
   font-size: 11pt;
   font-family: Georgia, Garamond, serif;
   background-image: url('silverware.jpg');
-  background-position:fixed;
   background-repeat: repeat;
 }
 
 a{
   color: #A4A400;
-  align-content: left;
+  align-content: flex-end;
 }
 
 div {
@@ -60,4 +59,8 @@ h4{
 
 ul {
   list-style-image: url('pie_icon.gif');
+}
+
+strong {
+  font-weight: bold;
 }
