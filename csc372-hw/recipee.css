@@ -12,6 +12,7 @@ h2 {
   text-align: left;
   font-size: 18pt;
   text-decoration: underline;
+  font-weight: normal;
   color: #A4A400;
   text-decoration-color: #A4A400;
   background-color:  #F0F0F0;
@@ -31,4 +32,11 @@ a{
 
 div {
   border-bottom: solid;
+}
+
+h3 {
+  font-style: italic;
+  background:  #FFFFA8;
+  font-size: 11pt;
+  font-weight: normal;
 }
