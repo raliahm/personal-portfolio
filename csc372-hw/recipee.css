@@ -27,7 +27,7 @@ body{
 
 a{
   color: #A4A400;
- 
+  align-content: left;
 }
 
 div {
@@ -39,4 +39,18 @@ h3 {
   background:  #FFFFA8;
   font-size: 11pt;
   font-weight: normal;
+}
+
+h4{
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 11pt;
+  text-align:left;
+}
+
+#second {
+  margin-left: 23pt;
+}
+#third {
+  margin-left: 65pt;
 }
