@@ -1,0 +1,20 @@
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: lightcoral;
+}
+nav{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px ;
+  text-decoration: none;
+  background-color:  #ffdd94;
+  margin-block: 50pt;
+  text-align: right;
+}
+nav a{
+  text-decoration: none;
+  color: black;
+  padding: 5%;
+}
