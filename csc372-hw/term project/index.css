@@ -4,6 +4,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   color: lightcoral;
+  animation: both;
 }
 nav{
   font-family: 'Courier New', Courier, monospace;
@@ -17,4 +18,12 @@ nav a{
   text-decoration: none;
   color: black;
   padding: 5%;
+}
+.video-container {
+  display: flex;
+  align-self: center;
+}
+.video-container iframe{
+  display: flex;
+  align-content: center;
 }
