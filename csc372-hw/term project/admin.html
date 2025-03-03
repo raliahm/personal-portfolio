@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="admin.css">
+   <link rel="stylesheet" href="logout.css">
   <title>Admin</title>
 </head>
   <body>
@@ -10,25 +11,25 @@
     <nav class="navbar">
         <div class="logo">Fashionista Nails Admin Center</div>
         <ul class="nav-links">
-                        <li><a href="admin.html">login</a></li>
-
-            <li><a href="index.html">Fashionista Home Page</a></li>
+            <li><a href="index.html">Customer site</a></li>
             <li><a href="shopping-cart.html">Shopping Cart</a></li>
             <li><a href="bulk-upload.html">Bulk Upload</a></li>
             <li><a href="product-listing.html">Listing</a></li>
             <li><a href="product-edit.html">Product</a></li>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="logout.html">logout</a></li>
+            <li><a href="admin.html">Login</a></li>
+            <li><a href="logout.html">Logout</a></li>
         </ul>
     </nav>
 
-    <div>
-         <div class="login-box">
+    <div class="admin-container">
+        <div class="logout-box">
         <h2>Admin Login</h2>
         <form action="admin-dashboard.html" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+           <p>Username: <input type="text" name="username" placeholder="Username" required></p> 
+           <p>Password: <input type="password" name="password" placeholder="Password" required></p>
+           <br>
+           <button type="submit">Login</button>
         </form>
     </div>
 

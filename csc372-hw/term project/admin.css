@@ -11,14 +11,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+
+    background-color: #ffdd94;
     padding: 15px 10%;
-    height: 60px;
+    height: 100px;
 }
 
 /* Logo styling */
 .logo {
-    color: white;
+    color: black;
     font-size: 24px;
     font-weight: bold;
 }
@@ -27,15 +28,15 @@
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 /* Links styling */
 .nav-links li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 8px 12px;
+    color: black;
+    font-size: 15px;
+    padding: 4px 6px;
     transition: all 0.3s ease;
 }
 
@@ -44,7 +45,11 @@
     background-color: #f4a261;
     color: black;
     border-radius: 5px;
-}
+} 
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
