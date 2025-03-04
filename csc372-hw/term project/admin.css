@@ -23,7 +23,7 @@
     height: 100vh;
     margin: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 /* Navbar styles */
 .navbar {
@@ -94,41 +94,82 @@
 .header {
   text-align: left;
   margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: lightpink; /* Light orange background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
 }
 
 .header h1 {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
 .header p {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   color: #555;
 }
 
-.form-body {
+.form-body { 
   margin-bottom: 20px;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 600px;
 }
 
 .form-body label {
   font-size: 16px;
+  margin-left: 10%;
   margin-bottom: 8px;
   display: block;
 }
 
 .form-body input[type="file"] {
+  margin-left: 10%;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
+.form-body button {
+  margin-left: 10%;
+}
 
+.instructions p{
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+.instructions h2{
+  font-family: 'Courier New', Courier, monospace;
+}
+.instructions ul li{
+  font-family: 'Courier New', Courier, monospace;
+  list-style: none;
+  margin-left: 10%;
+  font-weight: normal;
+}
 
+.example-format pre {
+  font-weight: normal;
+}
+.example-format p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  
+}
+
+.instructions, .example-format, .form-body {
+  flex-direction: row-reverse;
+  padding: 20px;
+  background-color: lightyellow; /* Just to differentiate the sections */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
