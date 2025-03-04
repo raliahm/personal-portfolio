@@ -122,7 +122,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
-
+.form-body textarea {
+  font-size: 16px;
+  margin-left: 10%;
+  margin-bottom: 8px;
+  display: block;
+}
 .form-body label {
   font-size: 16px;
   margin-left: 10%;
@@ -168,7 +173,7 @@
   padding: 20px;
   background-color: lightyellow; /* Just to differentiate the sections */
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
