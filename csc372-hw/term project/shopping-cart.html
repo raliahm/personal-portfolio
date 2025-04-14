@@ -5,57 +5,51 @@
   </head>
   <body>
     <nav class="navbar">
-        <div class="logo">Fashionista Nails Admin Center</div>
+        <div class="logo">Fashionista Nails</div>
         <ul class="nav-links">
-            <li><a href="index.html">Customer site</a></li>
-            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-            <li><a href="admin-upload.html">Upload</a></li>
-            <li><a href="product-listing.html">Listing</a></li>
-            <li><a href="product-edit.html">Product</a></li>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="admin.html">Login</a></li>
-            <li><a href="logout.html">Logout</a></li>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="details.html">Details</a>
+          <a href="admin.html">Admin portal</a>
+          <a href="shopping-cart.html">shopping cart</a>
         </ul>
     </nav>
     <div class="admin-container"> 
-       <h1> Cart Manager</h1>
-       <section class="orders">
-          <h2>Recent Orders</h2>
-          <table>
-              <thead>
-                <tr>
-                  <th>Order ID</th>
-                <th>Customer ID</th>
-                <th>Total</th>
-                <th>Status</th>
-                <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                    <tr>
-                        <td>#1001</td>
-                        <td>John Doe</td>
-                        <td>$120.00</td>
-                        <td>Pending</td>
-                        <td><button class="approve-btn">Approve</button></td>
-                    </tr>
-                    <tr>
-                        <td>#1002</td>
-                        <td>Jane Smith</td>
-                        <td>$250.00</td>
-                        <td>Shipped</td>
-                        <td><button class="view-btn">View</button></td>
-                    </tr>
-                    <tr>
-                        <td>#1002</td>
-                        <td>Jane Smith</td>
-                        <td>$250.00</td>
-                        <td>Shipped</td>
-                        <td><button class="view-btn">View</button></td>
-                    </tr>
-                </tbody>
-          </table>
-       </section>
+      <div class="main-layout" id="cart">
+        <div class="cart-header-container">
+           <button id="cart-toggle" >Shopping Cart</button>
+        </div>
+        <!-- Cart container, hidden initially -->
+        <div id="cart-container" style="display: none;">
+          <div id="cart-count" ></div>
+           <!-- Cart items will be dynamically added here -->
+          <div id="cart-total"></div> <!-- Cart total will be inside the cart container -->
+          <div id="clear-cart" style="display: none;;"></div>
+        </div> 
+        
+      </div>
     </div>
   </body>
+  <script src="cart.js">
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const storedCart = localStorage.getItem("cart");
+      if (storedCart) {
+        cart = JSON.parse(storedCart);
+      }
+      updateCartDisplay();
+
+      document.getElementById("cart-toggle").addEventListener('click', function () {
+    const cartContainer = document.getElementById("cart-container");
+    const headerContainer = document.querySelector(".cart-header-container");
+
+    if (cartContainer && headerContainer) {
+      const isVisible = cartContainer.style.display === "none" || cartContainer.style.display === "";
+      cartContainer.style.display = isVisible ? "block" : "none";
+      headerContainer.classList.toggle("cart-open");
+    }
+  });
+});
+  </script>
 </html>

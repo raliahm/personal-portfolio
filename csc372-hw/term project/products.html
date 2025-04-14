@@ -13,233 +13,58 @@
       <a href="products.html">Products</a>
       <a href="details.html">Details</a>
       <a href="admin.html">Admin portal</a>
-      <input type="text" placeholder="Search..">
+      <a href="shopping-cart.html">shopping cart</a>
+  
   </nav>
 </header>
 
 <body>
-  <div class="product-container" id="product-container">
-    <!-- Product cards will be inserted here -->
+  <div class="main-layout">
+    <!-- Filter Sidebar -->
+    <aside class="filter-sidebar">
+      <h2>Filter by Type</h2>
+      <div id="filter-options"></div>
+      <div class="price-filter">
+        <h4>Price Range</h4>
+        <label>
+          Min: <input type="number" id="min-price" placeholder="0">
+        </label>
+        <label>
+          Max: <input type="number" id="max-price" placeholder="500">
+        </label>
+      </div>
+      <h3>Search</h3>
+      <input type="text" id="search-bar" placeholder="Search products...">
+    </aside>
+
+    <!-- Product Container -->
+    <div class="product-container" id="product-container">
+      <!-- Product cards will be rendered here -->
+    </div>
+
+      <div class="right" id="cart">
+        <div class="cart-header-container">
+           <button id="cart-toggle" >Shopping Cart</button>
+        </div>
+        <!-- Cart container, hidden initially -->
+        <div id="cart-container" style="display: none;">
+          <div id="cart-count" ></div>
+           <!-- Cart items will be dynamically added here -->
+          <div id="cart-total"></div> <!-- Cart total will be inside the cart container -->
+          <div id="clear-cart" style="display: none;;"></div>
+        </div> 
+        
+      </div>
+      
+    
   </div>
 </body>
+<script src="product.js"></script>
+<script src="cart.js"></script>
 <footer>
 <a href="../index.html">Home</a>
 </footer>
+
+
+
 </html>
-<script>
-  const products = [
-    {
-      "name" : "sky blue",
-      "price" : 10,
-      "type" : "nail polish",
-      "img" : "nail-photos/3.jpeg"
-    }, 
-    {
-      "name" : "grey blue",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/4.jpeg"
-    },
-    {
-      "name" : "sage green",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/5.jpeg"
-    },
-    {
-      "name" : "lavendar",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/6.jpeg"
-    },
-    {
-      "name" : "grey",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/7.jpeg"
-    },
-    {
-      "name" : "top coat",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/8.jpeg"
-    },
-    {
-      "name" : "black",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/9.jpeg"
-    },
-    {
-      "name" : "cream",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/10.jpeg"
-    },
-    {
-      "name" : "baby pink",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/11.jpeg"
-    },
-    {
-      "name" : "indigo blue",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/12.jpeg"
-    },
-    {
-      "name" : "top and base coat",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/13.jpeg"
-    },
-    {
-      "name" : "blood red",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/14.jpeg"
-    },
-    {
-      "name" : "peach",
-      "price" : 10,
-      "type" : "nail polish",
-       "img" : "nail-photos/15.jpeg"
-    },
-    {
-      "name" : "baby clipper",
-      "price" : 10,
-      "type" : "nail kit",
-       "img" : "nail-photos/babyclippers.jpeg"
-    },
-    {
-      "name" : "blue fire press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/bluefirepressons.jpeg"
-
-    },
-    {
-      "name" : "buffer",
-      "price" : 10,
-      "type" : "nail kit",
-      "img" : "nail-photos/buffers.jpeg"
-    },
-    {
-      "name" : "cavier beads",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/caviorbeadsset.jpeg"
-    },
-    {
-      "name" : "checkered press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/checkeredpressons.jpeg"
-    },
-    {
-      "name" : "cheetah press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/cheetahpressons.webp"
-    },
-    {
-      "name" : "colorful press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/colorfulpressons.webp"
-    },
-    {
-      "name" : "flowers",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/flowers.jpeg"
-    },
-    {
-      "name" : "gold flakes",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/goldflakes.webp"
-    },
-    {
-      "name" : "silver flakes",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/silverflakes.webp"
-    },
-    {
-      "name" : "baby blue",
-      "price" : 10,
-      "type" : "nail polish",
-      "img" : "nail-photos/images2.jpeg"
-    },
-    {
-      "name" : "silver",
-      "price" : 10,
-      "type" : "nail polish",
-      "img" : "nail-photos/images.jpeg"
-    },
-    {
-      "name" : "nail clippers",
-      "price" : 10,
-      "type" : "nail kit",
-      "img" : "nail-photos/nailclippers.jpeg"
-    },
-    {
-      "name" : "nail files",
-      "price" : 10,
-      "type" : "nail kit",
-      "img" : "nail-photos/nailfiles.jpeg"
-    },
-    {
-      "name" : "nail polish remover",
-      "price" : 10,
-      "type" : "nail kit",
-      "img" : "nail-photos/nailpolishremover.jpeg"
-    },
-    {
-      "name" : "pink glitter",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/pinkglitter.webp"
-    },
-    {
-      "name" : "pink nails glitter press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/pinknailsglitterpressons.webp"
-    },
-    {
-      "name" : "snowflake design press ons",
-      "price" : 10,
-      "type" : "nail extension",
-      "img" : "nail-photos/snowflakedesignpressons.webp"
-    },
-    {
-      "name" : "star moon nail rhinestones",
-      "price" : 10,
-      "type" : "nail accessories",
-      "img" : "nail-photos/starmoonnailrhinestones.webp"
-    },
-    {
-      "name" : "toe nail clippers",
-      "price" : 10,
-      "type" : "nail kit",
-      "img" : "nail-photos/toenails.jpeg"
-    }
-
-  ];
-  const container = document.getElementById('product-container');
-  products.forEach(product => {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.innerHTML = 
-    `<img src="${product.img}" alt="${product.title}">
-        <h3>${product.name}</h3>
-        <p class="price">${product.price}</p>
-        <button>Add to Cart</button>
-      `;
-      container.appendChild(card);
-    
-  });
-</script>

@@ -276,6 +276,43 @@ button {
 button:hover {
     opacity: 0.8;
 }
+
+
+.cart-header-container #cart-toggle {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  background: #222;
+  color: white;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 30px;
+  transition: transform 0.3s ease, height 0.3s ease, font-size 0.3s ease, width 0.3s ease;
+  width: 50vh;
+}
+
+.cart-container {
+  display: none; /* Initially, the cart is hidden */
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+#cart h3 {
+  margin-top: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
