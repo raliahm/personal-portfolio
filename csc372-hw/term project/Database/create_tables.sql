@@ -1,42 +1,47 @@
-USE fashionista;
-
-CREATE TABLE Users(
-    UserID INT AUTO_INCREMENT PRIMARY KEY,
-    Email VARCHAR(100) NOT NULL,
-    password VARCHAR(8) NOT NULL,
-    FirstName varchar(20) NOT NULL,
-    LastName varchar(50) NOT NULL,
+-- Users table
+CREATE TABLE Users (
+    UserID INTEGER PRIMARY KEY,
+    Email TEXT NOT NULL UNIQUE,
+    UserPassword TEXT NOT NULL,
+    FirstName TEXT NOT NULL,
+    LastName TEXT NOT NULL,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP on UPDATE CURRENT_TIMESTAMP,
-    UserType ENUM('admin', 'shopper')
-);
-CREATE TABLE Categories(
-    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
-    CategoryName VARCHAR(100) NOT NULL;
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UserType TEXT CHECK(UserType IN ('admin', 'shopper'))
 );
 
-CREATE TABLE Products(
-    ProductID INT AUTO_INCREMENT PRIMARY KEY,
-    ProductName VARCHAR(100) NOT NULL,
+-- Categories table
+CREATE TABLE Categories (
+    CategoryID INTEGER PRIMARY KEY,
+    CategoryName TEXT NOT NULL
+);
+
+-- Products table
+CREATE TABLE Products (
+    ProductID INTEGER PRIMARY KEY,
+    ProductName TEXT NOT NULL,
     ProductDescription TEXT NOT NULL,
-    ProductImageURL VARCHAR(250) NOT NULL,
-    ProductPrice DECIMAL(10,2) NOT NULL,
-    CategoryID int,
-    FOREIGN KEY(CategoryID) REFERENCES Categories(CategoryID)
+    ProductImageURL TEXT NOT NULL,
+    ProductPrice REAL NOT NULL,
+    CategoryID INTEGER,
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
-CREATE TABLE Carts(
-    CartID INT AUTO_INCREMENT PRIMARY KEY,
-    CartStatus ENUM('new', 'abandoned', 'purchased'),
+
+-- Carts table
+CREATE TABLE Carts (
+    CartID INTEGER PRIMARY KEY,
+    CartStatus TEXT CHECK(CartStatus IN ('new', 'abandoned', 'purchased')),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UserID int,
+    UserID INTEGER,
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
-CREATE TABLE CartProducts(
-    CartProductID INT AUTO_INCREMENT PRIMARY KEY,
-    CartID INT,
-    ProductID INT,
-    Quantity INT NOT NULL,
-    FOREIGN KEY(CartID) REFERENCES Carts(CartID),
-    FOREIGN KEY(ProductID) REFERENCES Products(ProductID)
+-- CartProducts table
+CREATE TABLE CartProducts (
+    CartProductID INTEGER PRIMARY KEY,
+    CartID INTEGER,
+    ProductID INTEGER,
+    Quantity INTEGER NOT NULL,
+    FOREIGN KEY (CartID) REFERENCES Carts(CartID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
