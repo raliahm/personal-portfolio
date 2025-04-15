@@ -20,15 +20,30 @@ nav a{
   padding: 5%;
 }
 .video-container {
-  display: flex;
-  align-self: center;
-}
-.video-container iframe{
-  display: flex;
-  align-content: center;
+  height: 40%;
+  width: 100%;
 }
 
+#text-explain {
+  display: flex;
+  flex-direction: row; /* makes them sit side by side */
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space between the columns */
+  padding: 20px;
+  flex-wrap: wrap; /* lets it adjust on smaller screens */
+}
 
+.video-column,
+.text-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.video-column video {
+  width: 100%;
+  max-width: 400px;
+}
 
 .product-container {
   display: flex;
@@ -208,9 +223,85 @@ aside {
   cursor: pointer;
   border-radius: 4px;
 }
+.detail-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Product detail card */
+.product-details {
+  width: 75%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.product-details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.product-details h2 {
+  font-size: 2rem;
+  margin: 16px 0;
+  color: #222;
+}
+
+.product-details p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.product-details a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.product-details a:hover {
+  color: #0056b3;
+}
 
 
+/* Button styles */
+.add-to-cart-btn {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
 
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Shopping cart styles */
+.right {
+  width: 25%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column; /* Stack the sections vertically */

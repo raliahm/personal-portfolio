@@ -12,11 +12,33 @@
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="details.html">Details</a>
-      <input type="text" placeholder="Search..">
+      <a href="admin.html">Admin pages</a>
   </nav>
 </header>
 <body>
+    
+  <div class="detail-layout">
+    <div id="detail-container">
 
+      
+    </div>
+    <div class="right" id="cart">
+      <div class="cart-header-container">
+         <button id="cart-toggle" >Shopping Cart</button>
+      </div>
+      <!-- Cart container, hidden initially -->
+      <div id="cart-container" style="display: none;">
+        <div id="cart-count" ></div>
+         <!-- Cart items will be dynamically added here -->
+        <div id="cart-total"></div> <!-- Cart total will be inside the cart container -->
+        <div id="clear-cart" style="display: none;;"></div>
+      </div> 
+      
+    </div>
+  </div>
+  <script src="product.js"></script>
+  <script src="details.js"></script>
+  <script src="cart.js"></script>
 </body>
 <footer>
 <a href="../index.html">Home</a>
