@@ -89,8 +89,13 @@ function updateCartDisplay() {
           updateCartDisplay();
         });
       });
-
-    
+      if (!window.location.href.includes("shopping-cart.html")) {
+        document.querySelectorAll(".cart-checkout").forEach(button => {
+          button.addEventListener("click", () => {
+            window.location.href = "shopping-cart.html";
+          }); 
+        });
+      }
 
 
 }

@@ -45,3 +45,15 @@ CREATE TABLE CartProducts (
     FOREIGN KEY (CartID) REFERENCES Carts(CartID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
+CREATE TABLE Orders (
+  OrderID INTEGER PRIMARY KEY AUTOINCREMENT,
+  CartID INTEGER NOT NULL,
+  UserID INTEGER,
+  ShippingAddress TEXT NOT NULL,
+  CardNumber TEXT NOT NULL,
+  CardCV INTEGER NOT NULL,
+  OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  OrderStatus TEXT CHECK(OrderStatus IN ('delivered', 'processing', 'shipped', 'cancelled')) DEFAULT 'processing',	
+  FOREIGN KEY (CartID) REFERENCES Carts(CartID),
+  FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);

@@ -334,3 +334,63 @@ aside {
     width: 100%; /* Full width on mobile */
   }
 }
+/* Container for checkout button, make it consistent */
+.cart-checkout-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #fff0f6;  /* Light pink background */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Checkout button styling to make it consistent */
+.order {
+  background-color: #ff69b4;
+  color: white;
+  padding: 0.75rem 1.25rem;  /* Adjusted padding for a more compact button */
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  width: 100%;  /* Make it span the full width of the container */
+  text-align: center;  /* Center the text */
+}
+
+/* Hover effect for checkout button */
+.order:hover {
+  background-color: #ff85c1;
+}
+
+/* Add some space between the checkout button and the cart details */
+.order + .cart-details {
+  margin-top: 20px;
+}
+
+
+.checkout-form {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive styling to ensure the cart-checkout fits well */
+@media (max-width: 768px) {
+  .cart-checkout-container {
+    width: 100%;  /* Full width for smaller screens */
+  }
+  .cart-checkout {
+    font-size: 0.9rem;  /* Adjust font size for small screens */
+  }
+}
