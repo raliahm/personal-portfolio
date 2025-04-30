@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Meal Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<div class="container">
+    <header class="site-header">
+        <h1>Create Your Meal Plan</h1>
+        <a href="blog.html" class="btn">Back to Blog</a>
+    </header>
+
+    <main class="content">
+        <section id="meal-plan">
+            <div class="meal-options">
+                <h2>Recommended Dishes</h2>
+                <ul id="dish-list">
+                    <!-- List of dishes will be dynamically added here -->
+                </ul>
+            </div>
+
+            <div class="meal-plan-container">
+                <h2>Your Meal Plan</h2>
+                <ul id="meal-plan-list">
+                    <!-- Meal plan will be dynamically added here -->
+                </ul>
+
+                <div id="total-price">
+                    <h3>Total Price: $<span id="total-amount">0.00</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Reba's Food Blog</p>
+    </footer>
+</div>
+
+<script src="meal-plan.js"></script>
+</body>
+</html>
