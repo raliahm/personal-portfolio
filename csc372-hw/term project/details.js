@@ -8,7 +8,6 @@ function renderProduct() {
     const product = products.find(p => p.name === productName); 
   
     if (product) {
-        alert(`You are viewing: ${product.name}`);
         const card = document.createElement('div');
     card.className = 'product-detail'; 
   
@@ -32,10 +31,7 @@ function renderProduct() {
     container.appendChild(card);
 
     }
-    else {
-      document.getElementById("product-detail").innerHTML = "<p>Product not found.</p>";
-      return;
-    }
+  
 
     
   }

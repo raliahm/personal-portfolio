@@ -275,7 +275,6 @@ const products = [
         button.addEventListener('click', () => addToCart(product));  // Add to Cart
         card.appendChild(button);
         card.onclick = () => {
-          alert(`You clicked on: ${product.name}`);
           // redirect to details page
           window.location.href = `details.html?name=${encodeURIComponent(product.name)}`;
         };
@@ -332,7 +331,7 @@ document.querySelectorAll('.type-filter').forEach(cb => {
 });
 
 // Search bar
-searchBar.addEventListener('input', applyFilters);
+//searchBar.addEventListener('input', applyFilters);
 
 
 

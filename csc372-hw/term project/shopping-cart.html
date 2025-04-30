@@ -4,14 +4,14 @@
      <link rel="stylesheet" href="homepage.css">
   </head>
   <body>
+    <h1>FASHIONISTA NAILS</h1>
     <nav class="navbar">
-        <div class="logo">Fashionista Nails</div>
         <ul class="nav-links">
           <a href="homepage.html">Home</a>
           <a href="products.html">Products</a>
           <a href="details.html">Details</a>
-          <a href="admin.html">Admin portal</a>
           <a href="shopping-cart.html">shopping cart</a>
+          <a href="admin.html">Admin portal</a>
         </ul>
     </nav>
     
@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!cCon) return;
 
       cCon.innerHTML = `
-        <h2>Checkout</h2>
+        <h2>Checkout</h2> 
+        
         <form id="checkout-form">
           <label for="name">Full Name:</label>
           <input type="text" id="name" name="name" required><br><br>
@@ -104,12 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
           order: order
         };
         console.log("Form submitted with:", formData);
-        alert("Order submitted! Thanks, " + formData.name + " 🎉");
         // Clear cart
         localStorage.removeItem("cart");
 
         // Show success alert
         alert("Order submitted! Thanks, " + formData.name + " 🎉");
+        
 
         // Generate receipt content
         const receiptContent = `
