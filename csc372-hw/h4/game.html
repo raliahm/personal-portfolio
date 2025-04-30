@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <p><a href="../index.html">back to home</a></p>
+    </header>
+    <div id="game-message"></div>
+    <main>
+      
+
+      <section id="UserPaper">
+        <img src="images/paper.png" alt="Paper">
+        <h2>Paper</h2>
+      </section>
+      <section id="userRock">
+        <img src="images/rock.png" alt="Rock">
+        <h2>Rock</h2>
+      </section>
+      <section id="userScissors">
+        <img src="images/scissors.png" alt="Scissors">
+        <h2>Scissors</h2>
+      </section>
+
+    
+    </main>
+ <div id="bot">
+         
+        <h2>Bot's Choice</h2>
+        <img src="images/questionmark.png" alt="Waiting..." id="botImg">
+      
+  </div>
+<div id="scoreboard">
+  <div class="score">Wins: <span id="wins">0</span></div>
+  <div class="score">Losses: <span id="losses">0</span></div>
+  <div class="score">Ties: <span id="ties">0</span></div>
+  <button id="resetBtn">Reset</button>
+</div>
+  <script src="game.js"></script>
+</body>
+</html>

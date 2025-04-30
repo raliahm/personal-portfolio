@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.site-header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #d62828;
+}
+
+.site-header .author {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    flex: 2;
+}
+
+.blog-post h2 {
+    margin-top: 1.5rem;
+    color: #003049;
+    font-size: 1.5rem;
+}
+
+.blog-post ul {
+    list-style: disc inside;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.sidebar {
+    flex: 1;
+    background: #fff8e7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    margin-bottom: 0.5rem;
+    color: #6a040f;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: #9d0208;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: #d00000;
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#coffeology {
+    margin: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+#tates {
+    margin: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+#mexican {
+    margin: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+.dish-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.dish-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+    border: 2px solid transparent;
+}
+
+.dish-img.active {
+    width: 220px;
+    height: 220px;
+    transform: scale(1.05);
+    border: 2px solid #d62828;
+}
+
+.dish-details {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-left: 4px solid #d62828;
+    background-color: #fff0eb;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.dish-details .credit {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+.tates-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.tates-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+    border: 2px solid transparent;
+}
+
+.tates-img.active {
+    width: 220px;
+    height: 220px;
+    transform: scale(1.05);
+    border: 2px solid #d62828;
+}
+
+.tates-details {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-left: 4px solid #d62828;
+    background-color: #fff0eb;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.tates-credit .credit {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+
+
+.mexican-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.mexican-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+    border: 2px solid transparent;
+}
+
+.mexican-img.active {
+    width: 220px;
+    height: 220px;
+    transform: scale(1.05);
+    border: 2px solid #d62828;
+}
+
+.mexican-details {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-left: 4px solid #d62828;
+    background-color: #fff0eb;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.mexican-credit .credit {
+    font-size: 0.8rem;
+    color: #888;
+}

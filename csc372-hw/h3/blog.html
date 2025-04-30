@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Dinner Chicken Dinner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="site-header">
+        <h1>Dinner Dinner Chicken Dinner</h1>
+        <p class="author">Posted by Reba</p>
+        <a href="../index.html">back to home</a>
+    </header>
+
+    <main class="content">
+        <article class="blog-post">
+          <h2>One stop to Tate Street</h2>
+            <section id="intro">
+                <h2>Looking for places around Petty building for a dine in experience? </h2>
+                <p>Look no further—I've explored every restaurant on Tate Street that's truly worth your time and money.
+                    As someone new to Greensboro, I’ve found that one of the best ways to understand a city’s vibe is through
+                    its food. Every bite reveals something about the culture, the people, and the heart of the community.
+                    From cozy coffee shops to buzzing local eateries, I’ve made it a mission to uncover the hidden gems.
+                    Whether you’re craving bold flavors, big portions, or a welcoming atmosphere, this guide is for you.
+                    If you love quality food with great value, keep reading—you’re in for a delicious journey. </p>
+            </section>
+
+            <section>
+                <h2>Top Chicken Spots in Town</h2>
+                <ul>
+                    <li><strong>Tates Street Coffee House</strong> – casual bites with artistic vibes</li>
+                    <li><strong>Crazy Mexico</strong> – spicy chicken tacos you’ll crave daily</li>
+                    <li><strong>Coffeology</strong> – underrated chicken wraps + amazing espresso</li>
+                </ul>
+            </section>
+
+            <section id="coffeology">
+                <h2>Coffeology</h2>
+
+                <p>
+                    📍 Located right on Tate Street, Coffeology is a student-favorite known for its cozy atmosphere and creative drink menu.
+                    Open daily from 7 AM to 6 PM, it’s the perfect spot for study sessions, coffee dates, or a quiet meal.
+                    Their food is fresh, flavorful, and always served with a smile. Don't miss their underrated hot meals and top-tier espresso drinks.
+                </p>
+                <div class="dish-gallery">
+                    <img src="images/breakfast%20burrito.png"
+                         alt="Breakfast Burrito"
+                         class="dish-img"
+                         data-name="Breakfast Burrito"
+                         data-desc="Choice of protien, scrambled eggs, cheddar cheese, lettuce, all in one tortilla."
+                         data-price="$9.50"
+                         data-credit="Image by doordash" >
+
+                    <img src="images/breakfast-sandwich.png"
+                         alt="Breakfast Sandwich"
+                         class="dish-img"
+                         data-name="Breakfast Sandwich"
+                         data-desc="Egg, cheese, choice of bread"
+                         data-price="$7.00"
+                         data-credit="Image by doordash" >
+
+                    <img src="images/club-panini.png"
+                         alt="Club Panini"
+                         class="dish-img"
+                         data-name="Club Panini"
+                         data-desc="Ham, turkey, bacon, swiss cheese, lettuce, tomatoes, and mayo."
+                         data-price="$14.00"
+                         data-credit="Image by doordash" >
+                </div>
+
+                <div id="dish-description" class="dish-details" style="display: none;">
+                    <h3 id="dish-name">?</h3>
+                    <p id="dish-info"></p>
+                    <p><strong id="dish-price"></strong></p>
+                    <p class="credit" id="dish-credit"></p>
+                </div>
+            </section>
+            <section id="tates">
+                <h2>Tate Street Coffee</h2>
+
+                <p>
+                    📍 Nestled in the heart of campus, Tate Street Coffee House is a local institution that’s been serving students and locals alike for years.
+                    Known for its eclectic art, mellow vibes, and strong espresso, it’s a perfect study spot or chill hangout. Open daily from 6:30 AM to 9 PM,
+                    they offer more than just great coffee — their food is simple, fresh, and satisfying.
+                </p>
+
+                <div class="dish-gallery tates-gallery">
+                    <img src="images/drip%20coffee.png"
+                         alt="Drip Coffee"
+                         class=" tates-img"
+                         data-name="Drip Coffee"
+                         data-desc="Simple coffee"
+                         data-price="$2.95"
+                         data-credit="Image by doordash" >
+
+                    <img src="images/muffin.png"
+                         alt="Muffin"
+                         class=" tates-img"
+                         data-name="Muffin"
+                         data-desc="Sweet muffin, the flavors are on the house, it keeps changing"
+                         data-price="$3.50"
+                         data-credit="Image by doordash" >
+
+                    <img src="images/iced%20coffee.png"
+                         alt="Iced Coffee"
+                         class=" tates-img"
+                         data-name="Iced Coffee"
+                         data-desc="Iced coffee, customize it with whatever syrup you enjoy!"
+                         data-price="$2.95"
+                         data-credit="Image by doordash" >
+                </div>
+
+                <!-- Description box appears here, under Tate’s images -->
+                <div id="tates-description" class="dish-details" style="display: none;">
+                    <h3 id="tates-name">?</h3>
+                    <p id="tates-info"></p>
+                    <p><strong id="tates-price"></strong></p>
+                    <p class="credit" id="tates-credit"></p>
+                </div>
+            </section>
+            <section id="mexican">
+                <h2>Crazy Mexico</h2>
+
+                <p>
+                    📍 Nestled in the heart of campus, Tate Street Coffee House is a local institution that’s been serving students and locals alike for years.
+                    Known for its eclectic art, mellow vibes, and strong espresso, it’s a perfect study spot or chill hangout. Open daily from 6:30 AM to 9 PM,
+                    they offer more than just great coffee — their food is simple, fresh, and satisfying.
+                </p>
+
+                <div class="mexican-gallery">
+                    <img src="images/chicken-fajitas.png"
+                         alt="Chicken Fajitas"
+                         class="mexican-img"
+                         data-name="Chicken Fajitas"
+                         data-desc="Tender beef or chicken fajitas with bell peppers, onions and tomatoes.
+                         Served with guacamole, sour cream, rice, beans and tortillas."
+                         data-price="$15.17"
+                         data-credit="Image by yelp" >
+
+                    <img src="images/tacos.png"
+                         alt="Tacos"
+                         class="mexican-img"
+                         data-name="Tacos"
+                         data-desc="3 flour tortilla taco filled with grilled seasoned slices of tilapia.
+                         Served with lettuce avocados, pico de gallo and Spanish rice."
+                         data-price="$14.86"
+                         data-credit="Image by yelp" >
+
+                    <img src="images/sandwich.png" alt="Veggie Torta"
+                         class="mexican-img"
+                         data-name="Veggie torta"
+                         data-desc="Mexican sandwich.Carnita asada, chicken. Ham, chorizo.
+                         Served with fries or onions rings."
+                         data-price="$13.03"
+                         data-credit="Image by yelp" >
+                </div>
+
+                <!-- Description box appears here, under Tate’s images -->
+                <div id="mexican-description" class="dish-details" style="display: none;">
+                    <h3 id="mexican-name">?</h3>
+                    <p id="mexican-info"></p>
+                    <p><strong id="mexican-price"></strong></p>
+                    <p class="credit" id="mexican-credit"></p>
+                </div>
+            </section>
+
+
+
+        </article>
+
+
+        <aside class="sidebar">
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="http://www.tatestreetcoffeehouse.com/">Tates Street Coffee House</a></li>
+                <li><a href="http://crazymexiconc.com/">Crazy Mexico</a></li>
+                <li><a href="https://www.coffeeologygso.com/">Coffeology</a></li>
+            </ul>
+            <section id="meal-plan-link">
+                <h3>Create Your Meal Plan</h3>
+                <p>Want to plan your meals? Select dishes from our list and create your perfect day of dining!</p>
+                <a href="meal-plan.html" class="btn">Create Meal Plan</a>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Reba's Food Blog</p>
+    </footer>
+</div>
+<script src="blog.js"></script>
+</body>
+</html>

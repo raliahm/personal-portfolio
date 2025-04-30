@@ -1,0 +1,102 @@
+main {
+  display: flex;
+  flex-wrap: wrap;  /* Allow elements to wrap to the next line */
+  justify-content: center;
+  gap: 2rem;  /* space between sections */
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 2px solid black;;
+
+}
+
+header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+section {
+  text-align: center;
+  cursor: pointer;
+}
+
+section img {
+  width: 20rem; 
+  height: 20rem;
+  max-width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Hover effect for image */
+section:hover img {
+  transform: scale(1.1);
+  border-color: red;
+}
+.selected img {
+  border-color: red !important;
+}
+
+#bot {
+  flex-basis: 100%;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-top: 1rem;
+}
+#bot img {
+  width: 20rem; 
+  height: 20rem;
+  max-width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#game-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+#scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: fit-content;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  align-items: center;
+}
+
+.score {
+  font-size: 1.2rem;
+}
+
+#resetBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resetBtn:hover {
+  background-color: #c0392b;
+}
